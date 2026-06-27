@@ -7,7 +7,7 @@ export const business = {
   email: "ojjunkremoval@gmail.com",
   emailHref: "mailto:ojjunkremoval@gmail.com",
   calendly:
-    "https://calendly.com/ojjunkremoval-estimate/junkremoval?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=25ff00",
+    "https://calendly.com/ojjunkremoval-estimate/junkremoval?hide_event_type_details=1&hide_gdpr_banner=1&background_color=333232&text_color=ffffff&primary_color=0bb501",
   facebook: "https://www.facebook.com/profile.php?id=61563822505912",
   thumbtack:
     "https://www.thumbtack.com/ga/peachtree-corners/junk-removal/oj-junk-removal4043997457fast-service/service/408241237328470029",

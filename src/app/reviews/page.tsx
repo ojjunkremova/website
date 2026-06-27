@@ -78,7 +78,7 @@ export default function ReviewsPage() {
           <div className="hero-actions">
             <Link href="/quote" className="btn btn-primary">
               <CalendarCheck size={18} />
-              Book a Free Quote
+              Book a Cleanup
             </Link>
             <a href={business.thumbtack} target="_blank" rel="noreferrer" className="btn btn-secondary">
               View Thumbtack Profile

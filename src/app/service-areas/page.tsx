@@ -70,7 +70,7 @@ export default function ServiceAreasPage() {
           </p>
           <div className="hero-actions">
             <Link href="/quote" className="btn btn-primary">
-              Book a Free Quote
+              Book a Cleanup
             </Link>
             <a href={business.phoneHref} className="btn btn-secondary">
               Call {business.phone}

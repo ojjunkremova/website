@@ -138,7 +138,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <div className="mobile-sticky-actions" aria-label="Quick contact actions">
           <Link href="/quote">
             <CalendarCheck size={17} />
-            Book
+            Book Cleanup
           </Link>
           <a href={business.phoneHref}>
             <Phone size={17} />
