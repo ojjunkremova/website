@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { Footer } from "@/components/site/footer";
 import { Header } from "@/components/site/header";
+import { IntentPopup } from "@/components/site/intent-popup";
 import { SchemaScript } from "@/components/site/schema-script";
 import { business, serviceAreas, siteFaq } from "@/lib/site-data";
 import { absoluteUrl } from "@/lib/utils";
@@ -55,8 +56,8 @@ export const metadata: Metadata = {
     images: [business.ogImage]
   },
   icons: {
-    icon: business.logo,
-    shortcut: business.logo,
+    icon: business.favicon,
+    shortcut: business.favicon,
     apple: business.logo
   },
   robots: {
@@ -135,10 +136,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         <main>{children}</main>
         <Footer />
+        <IntentPopup />
         <div className="mobile-sticky-actions" aria-label="Quick contact actions">
           <Link href="/quote">
             <CalendarCheck size={17} />
-            Book a Cleaning
+            Free Quote
           </Link>
           <a href={business.phoneHref}>
             <Phone size={17} />

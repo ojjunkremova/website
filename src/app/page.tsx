@@ -32,6 +32,23 @@ const homeFaqSchema = {
   }))
 };
 
+const featuredProof = [
+  {
+    src: "/images/proof-refresh/living-room-before-after.jpg",
+    alt: "Before and after living room cleanup collage showing furniture and picture frames removed to reopen the floor around a brick fireplace.",
+    badge: "Featured proof",
+    title: "Real room-by-room before and after work",
+    body: "These are the kinds of lived-in spaces people need cleared fast, without damage, drama, or guesswork."
+  },
+  {
+    src: "/images/proof-refresh/driveway-clear-after.jpg",
+    alt: "Clear driveway and front approach after pickup with the house exterior visible and no debris left behind.",
+    badge: "Finished result",
+    title: "A clean finish people actually notice",
+    body: "The goal is not just loading the truck. It is leaving the space feeling usable again."
+  }
+];
+
 export default async function HomePage() {
   const googleReviews = await loadGoogleReviews();
   const featuredGoogleReviews = googleReviews.slice(0, 3);
@@ -42,14 +59,14 @@ export default async function HomePage() {
         <div className="container hero-inner">
           <div className="hero-copy reveal">
             <span className="tagline">820+ 5-star reviews and fast Atlanta Metro routes</span>
-            <h1>Atlanta junk removal that clears the pile today.</h1>
+            <h1>Serious junk removal for homes, rentals, and commercial properties.</h1>
             <p className="hero-lede">
-              OJ Junk Removal removes furniture, appliances, boxes, renovation debris, yard waste, and whole
-              cleanout piles with fast quotes, careful loading, and same-day availability when routes allow.
+              OJ Junk Removal clears furniture, appliances, garage clutter, move-out junk, renovation debris, and
+              recurring property trash with fast quotes, careful loading, and same-day availability when routes allow.
             </p>
             <div className="answer-first">
-              Need junk gone now? Book a free estimate online or call {business.phone}. Send photos for a faster,
-              cleaner quote before the crew arrives.
+              Need it gone quickly? Book a free estimate online or call {business.phone}. Send photos for a tighter
+              quote, faster scheduling, and less back-and-forth.
             </div>
             <div className="hero-actions">
               <Link href="/quote" className="btn btn-primary">
@@ -71,33 +88,26 @@ export default async function HomePage() {
                 <span>pickup when routes allow</span>
               </div>
               <div className="proof-stat">
-                <strong>Photos</strong>
-                <span>accepted for faster quotes</span>
+                <strong>Monthly plans</strong>
+                <span>available for commercial properties</span>
               </div>
             </div>
           </div>
 
           <div className="hero-visual reveal">
-            <HaulAnimation />
-            <div className="hero-photo-stack">
-              <div className="hero-photo">
-                <span className="photo-badge">Before pickup</span>
-                <Image
-                  src="/images/proof/driveway-bags-before.webp"
-                  alt="Before junk removal photo showing a driveway full of bagged trash and loose household items before pickup"
-                  fill
-                  sizes="(max-width: 1120px) 100vw, 38vw"
-                  priority
-                />
-              </div>
-              <div className="hero-photo small">
-                <span className="photo-badge">After pickup</span>
-                <Image
-                  src="/images/proof/driveway-bags-after.webp"
-                  alt="After junk removal photo showing the same driveway cleared and cleaned up after pickup"
-                  fill
-                  sizes="(max-width: 1120px) 100vw, 28vw"
-                />
+            <div className="hero-proof-board">
+              <HaulAnimation />
+              <div className="hero-photo-stack">
+                {featuredProof.map((item, index) => (
+                  <article className={`hero-photo${index === 1 ? " small" : ""}`} key={item.src}>
+                    <span className="photo-badge">{item.badge}</span>
+                    <Image src={item.src} alt={item.alt} fill sizes="(max-width: 1120px) 100vw, 38vw" priority={index === 0} />
+                    <div className="hero-photo-caption">
+                      <strong>{item.title}</strong>
+                      <span>{item.body}</span>
+                    </div>
+                  </article>
+                ))}
               </div>
             </div>
           </div>
@@ -109,8 +119,8 @@ export default async function HomePage() {
           <strong>Full-service hauling</strong>
           <span>Furniture</span>
           <span>Appliances</span>
-          <span>Scrap metal</span>
           <span>Move-outs</span>
+          <span>Commercial pickups</span>
           <span>Yard debris</span>
           <span>Construction debris</span>
         </div>
@@ -121,19 +131,19 @@ export default async function HomePage() {
           <div className="section-header center reveal">
             <h2>No mystery. Just a clear path from clutter to clean.</h2>
             <p>
-              The site should work the same way the service does: direct, fast, and easy to trust. Every step is built
-              around getting your quote right and getting your space back.
+              Good local service sites convert when they feel direct and competent. Every step here is meant to reduce
+              hesitation, tighten the quote, and get the job on the route faster.
             </p>
           </div>
           <div className="steps-grid">
             {[
               {
                 title: "Send photos or book",
-                text: "Upload photos through the quote flow or call the team. Photos help confirm volume, access, and truck space."
+                text: "Upload photos through the quote flow or call the team. Photos help confirm volume, access, truck space, and labor."
               },
               {
                 title: "Get a clear estimate",
-                text: "OJ Junk Removal confirms the scope before work starts, including stairs, heavy items, and disposal needs."
+                text: "OJ Junk Removal confirms the scope before work starts, including stairs, heavy items, cleanup type, and disposal needs."
               },
               {
                 title: "The crew hauls and tidies",
@@ -155,8 +165,8 @@ export default async function HomePage() {
           <div className="section-header reveal">
             <h2>Junk removal services built for real Atlanta jobs.</h2>
             <p>
-              The flyers, current site, and review details all point to the same core promise: skilled junk removal
-              experts who handle cluttered basements, packed garages, furniture, scrap metal, and full cleanouts.
+              The best-converting service pages show range without sounding vague. OJ handles packed garages, furniture
+              pickups, move-out cleanouts, recurring property overflow, and heavy mixed loads across the metro.
             </p>
           </div>
           <div className="service-grid">
@@ -189,10 +199,10 @@ export default async function HomePage() {
         <div className="container split">
           <div className="split-copy reveal">
             <span className="tagline">Proof before polish</span>
-            <h2>Real job photos keep the quote honest.</h2>
+            <h2>Real before-and-after photos do more than a sales pitch ever will.</h2>
             <p>
-              Good junk removal sites should not hide behind generic stock photos. OJ has actual job images, before and
-              after cleanup shots, and visible proof that the team handles messy spaces without drama.
+              People book faster when they can see the difference for themselves. These are real OJ jobs: packed
+              garages, room cleanouts, curbside loads, and finished spaces that look ready to use again.
             </p>
             <div className="hero-actions">
               <Link href="/reviews" className="btn btn-secondary">
@@ -205,8 +215,8 @@ export default async function HomePage() {
           </div>
           <div className="photo-frame reveal">
             <Image
-              src="/images/proof/driveway-furniture-after.webp"
-              alt="Clean garage driveway after furniture and cardboard junk removal service"
+              src="/images/proof-refresh/bedrooms-before-after.jpg"
+              alt="Four-panel before and after collage showing two bedrooms cleared from furnished, cluttered spaces into empty move-out ready rooms."
               fill
               sizes="(max-width: 1120px) 100vw, 45vw"
             />
@@ -219,8 +229,8 @@ export default async function HomePage() {
           <div className="section-header reveal">
             <h2>Customers call out speed, respect, and clean work.</h2>
             <p>
-              These are the Google review snippets you shared, surfaced with enough context for a visitor to understand
-              the job, not just see a rating badge.
+              The strongest local-service trust signal is consistency. These review snippets help visitors see the same
+              pattern: fast response, fair pricing, and a crew that handles the property with respect.
             </p>
           </div>
           <div className="review-grid">
@@ -249,13 +259,44 @@ export default async function HomePage() {
       <section className="section">
         <div className="container">
           <div className="section-header center reveal">
-            <h2>Before and after job gallery.</h2>
+            <h2>Recent job proof that looks real because it is.</h2>
             <p>
-              A quick sample from the full reviews page using the latest real OJ job photos instead of text-stamped
-              before-and-after graphics. The frames stay uncropped so the cleanup context is still easy to read.
+              The gallery mixes interior cleanouts, curbside loads, truck-day photos, and finished results so visitors
+              can quickly understand range, scale, and the standard of work.
             </p>
           </div>
           <ProofGallery limit={8} compact />
+        </div>
+      </section>
+
+      <section className="section section-ink">
+        <div className="container split commercial-split">
+          <div className="split-copy reveal">
+            <span className="tagline">Commercial pickup plans</span>
+            <h2>Monthly junk pickup for apartments, offices, and multi-unit properties.</h2>
+            <p>
+              OJ Junk Removal also works with property managers, landlords, and commercial sites that need dependable
+              recurring pickup. Monthly plans can be built around unit count, turnover volume, access, and how often
+              the property needs service.
+            </p>
+            <div className="hero-actions">
+              <Link href="/quote" className="btn btn-primary">
+                Ask About Monthly Rates
+              </Link>
+              <a href={business.phoneHref} className="btn btn-ghost">
+                Call for Commercial Pricing
+              </a>
+            </div>
+          </div>
+          <div className="bullet-panel reveal commercial-panel">
+            <h2>Built for recurring property needs</h2>
+            <ul className="check-list">
+              <li>Monthly service plans for commercial properties and larger complexes</li>
+              <li>Per-unit pricing guidance for bigger apartment communities</li>
+              <li>Help with turnovers, bulk-item areas, illegal dumping, and common-area overflow</li>
+              <li>Flexible route scheduling for managers who need one reliable crew</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -265,8 +306,8 @@ export default async function HomePage() {
             <span className="tagline">Atlanta Metro service routes</span>
             <h2>Local junk removal without the runaround.</h2>
             <p>
-              OJ Junk Removal serves Atlanta Metro homeowners, renters, landlords, contractors, and small businesses
-              that need a direct answer and a fast cleanup plan.
+              OJ Junk Removal serves Atlanta Metro homeowners, renters, landlords, contractors, and property managers
+              who want a direct answer and a crew that actually shows up ready to work.
             </p>
             <div className="area-grid">
               {serviceAreas.map((area) => (
@@ -282,6 +323,7 @@ export default async function HomePage() {
               <li>Same-day service when the route allows</li>
               <li>Furniture, appliances, scrap metal, and cleanouts</li>
               <li>Free estimates with photos welcome</li>
+              <li>Monthly commercial plans available</li>
               <li>Recycling and donation prioritized when practical</li>
               <li>Respectful loading and property-conscious crews</li>
             </ul>
@@ -295,11 +337,11 @@ export default async function HomePage() {
             <span className="tagline">Questions before booking</span>
             <h2>Fast answers reduce quote hesitation.</h2>
             <p>
-              The homepage includes structured FAQ content for both visitors and search engines, with answer-first
-              language that matches the way people compare local junk removal companies.
+              These are the questions people ask when they are close to booking. The copy stays direct so homeowners,
+              landlords, and commercial managers can make a decision quickly.
             </p>
             <Link href="/quote" className="btn btn-primary">
-              Book a Cleaning
+              Book a Free Estimate
             </Link>
           </div>
           <div className="faq-list">

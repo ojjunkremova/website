@@ -13,7 +13,8 @@ export const business = {
   thumbtack:
     "https://www.thumbtack.com/ga/peachtree-corners/junk-removal/oj-junk-removal4043997457fast-service/service/408241237328470029",
   logo: "/images/logo/oj-junk-logo.jpg",
-  ogImage: "/og-image.jpg",
+  ogImage: "/images/og/oj-junk-og.jpg",
+  favicon: "/favicon.png",
   area: "Atlanta Metro Area",
   addressRegion: "GA",
   priceRange: "$$"
@@ -548,80 +549,68 @@ export const reviews = [
 
 export const jobImages = [
   {
-    src: "/images/proof/driveway-bags-before.webp",
-    alt: "Before junk removal photo of a driveway loaded with black trash bags, cardboard, and household items ready for pickup.",
-    label: "Driveway bag haul",
+    src: "/images/proof-refresh/bedrooms-before-after.jpg",
+    alt: "Four-panel before and after collage showing two bedrooms cleared from furnished, cluttered spaces into empty move-out ready rooms.",
+    label: "Bedroom cleanout transformation",
+    stage: "Before + After"
+  },
+  {
+    src: "/images/proof-refresh/living-room-before-after.jpg",
+    alt: "Before and after living room cleanup collage showing furniture and picture frames removed to reopen the floor around a brick fireplace.",
+    label: "Living room reset",
+    stage: "Before + After"
+  },
+  {
+    src: "/images/proof-refresh/sheds-before-after.jpg",
+    alt: "Before and after shed cleanup collage showing debris-filled storage spaces cleared down to open floors and walls.",
+    label: "Shed and storage cleanup",
+    stage: "Before + After"
+  },
+  {
+    src: "/images/proof-refresh/garage-packed-before.jpg",
+    alt: "Packed garage before junk removal with a stained mattress, stacked boxes, chairs, and loose items blocking the space.",
+    label: "Garage packed before pickup",
     stage: "Before"
   },
   {
-    src: "/images/proof/driveway-bags-after.webp",
-    alt: "After junk removal photo showing the same driveway cleared and washed down beside landscaped shrubs.",
-    label: "Driveway bag haul",
+    src: "/images/proof-refresh/room-clean-after.jpg",
+    alt: "Clean empty room after junk removal with open carpet space and natural light coming through the windows.",
+    label: "Room cleared after haul-away",
     stage: "After"
   },
   {
-    src: "/images/proof/garage-boxes-before.webp",
-    alt: "Before garage cleanout photo with stacked boxes, bins, and loose household clutter around a parked car.",
-    label: "Garage box cleanout",
+    src: "/images/proof-refresh/curbside-whole-house-before.jpg",
+    alt: "Large curbside pile before removal with furniture, mattresses, clothing, and bagged trash staged for a whole-house cleanout.",
+    label: "Whole-house curbside load",
     stage: "Before"
   },
   {
-    src: "/images/proof/garage-boxes-after.webp",
-    alt: "After garage cleanout photo with the floor opened up and the garage mostly cleared beside the parked car.",
-    label: "Garage box cleanout",
+    src: "/images/proof-refresh/truck-load-driveway.jpg",
+    alt: "Junk removal truck backed into a driveway while furniture, bags, and bulky items are staged for loading.",
+    label: "Truck-ready driveway haul",
+    stage: "In Progress"
+  },
+  {
+    src: "/images/proof-refresh/commercial-carpet-removal.jpg",
+    alt: "Commercial cleanup with large rolls of carpet, bags, and renovation debris staged for removal near a dumpster area.",
+    label: "Commercial carpet and debris removal",
+    stage: "Commercial"
+  },
+  {
+    src: "/images/proof-refresh/exterior-debris-before.jpg",
+    alt: "Exterior before photo showing cardboard, broken cabinets, and mixed debris piled in front of a home.",
+    label: "Exterior debris before pickup",
+    stage: "Before"
+  },
+  {
+    src: "/images/proof-refresh/property-clean-exterior.jpg",
+    alt: "Clean residential exterior after junk removal with the front slope and driveway opened back up.",
+    label: "Property cleaned up after haul",
     stage: "After"
   },
   {
-    src: "/images/proof/basement-bulky-before.webp",
-    alt: "Before basement cleanup photo showing bulky exercise equipment, a bicycle, a clock face, and bagged junk in a framed room.",
-    label: "Basement bulky-item cleanup",
-    stage: "Before"
-  },
-  {
-    src: "/images/proof/basement-bulky-after-a.webp",
-    alt: "After basement cleanup photo showing a cleared concrete floor and opened wall framing after bulky items were removed.",
-    label: "Basement bulky-item cleanup",
-    stage: "After"
-  },
-  {
-    src: "/images/proof/basement-bulky-after-b.webp",
-    alt: "Second after photo of the same basement cleanup showing a wider clean path and open floor space near the doorway.",
-    label: "Basement bulky-item cleanup",
-    stage: "After"
-  },
-  {
-    src: "/images/proof/front-yard-before.webp",
-    alt: "Before outdoor cleanup photo of a front yard and driveway with a work trailer and scattered items near the porch.",
-    label: "Outdoor property cleanup",
-    stage: "Before"
-  },
-  {
-    src: "/images/proof/trampoline-before.webp",
-    alt: "Before backyard cleanup photo with an old trampoline standing in a wooded yard.",
-    label: "Backyard trampoline removal",
-    stage: "Before"
-  },
-  {
-    src: "/images/proof/backyard-after.webp",
-    alt: "After backyard cleanup photo showing the same area opened up after the trampoline and debris were removed.",
-    label: "Backyard trampoline removal",
-    stage: "After"
-  },
-  {
-    src: "/images/proof/garage-furniture-before.webp",
-    alt: "Before garage furniture removal photo with boxed items, packing materials, and wood furniture stacked near the entrance.",
-    label: "Garage furniture haul",
-    stage: "Before"
-  },
-  {
-    src: "/images/proof/driveway-furniture-before.webp",
-    alt: "Before driveway pickup photo with chairs, cardboard, boxed items, and bagged junk piled in front of a garage door.",
-    label: "Driveway furniture pickup",
-    stage: "Before"
-  },
-  {
-    src: "/images/proof/driveway-furniture-after.webp",
-    alt: "After driveway pickup photo showing the garage door area fully cleared with only the clean concrete pad remaining.",
+    src: "/images/proof-refresh/driveway-clear-after.jpg",
+    alt: "Clear driveway and front approach after pickup with the house exterior visible and no debris left behind.",
     label: "Driveway furniture pickup",
     stage: "After"
   }

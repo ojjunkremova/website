@@ -19,7 +19,7 @@ export default function QuotePage() {
       <section className="page-hero">
         <div className="container page-hero-inner">
           <span className="tagline">Easy scheduling</span>
-          <h1>Book your cleaning time.</h1>
+          <h1>Book your junk removal estimate.</h1>
           <p>
             Choose a time, describe what needs to go, and include photos if you have them. For urgent same-day pickup,
             call {business.phone} directly.
