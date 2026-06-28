@@ -72,7 +72,7 @@ export default async function ReviewsPage() {
       <section className="page-hero">
         <div className="container page-hero-inner">
           <span className="tagline">Customer proof</span>
-          <h1>44 Google reviews and real job photos.</h1>
+          <h1>89 Google reviews and real job photos.</h1>
           <p>
             Customers call out fast quotes, same-day arrivals, respectful crews, and clean removal work. This page
             pairs Google reviews with recent before and after photos from real OJ cleanup jobs.
