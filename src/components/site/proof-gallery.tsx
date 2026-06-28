@@ -24,7 +24,7 @@ export function ProofGallery({ limit, compact = false }: ProofGalleryProps) {
             />
           </div>
           <figcaption>
-            <span>{String(index + 1).padStart(2, "0")}</span>
+            <span>{image.stage}</span>
             {image.label}
           </figcaption>
         </figure>

@@ -11,7 +11,7 @@ import { absoluteUrl } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Reviews and Before After Job Photos",
   description:
-    "See OJ Junk Removal Google reviews, customer feedback, and real before and after job photos from Atlanta Metro junk removal work.",
+    "See OJ Junk Removal Google reviews, customer feedback, and real Atlanta junk removal before and after photos from recent cleanup jobs.",
   alternates: {
     canonical: "/reviews"
   }
@@ -75,7 +75,7 @@ export default async function ReviewsPage() {
           <h1>44 Google reviews and real job photos.</h1>
           <p>
             Customers call out fast quotes, same-day arrivals, respectful crews, and clean removal work. This page
-            pairs Google reviews with real before and after photos.
+            pairs Google reviews with recent before and after photos from real OJ cleanup jobs.
           </p>
           <div className="hero-actions">
             <Link href="/quote" className="btn btn-primary">
@@ -124,10 +124,10 @@ export default async function ReviewsPage() {
       <section className="section section-green">
         <div className="container">
           <div className="section-header reveal">
-            <h2>{jobImages.length} job photos from the before and after folder.</h2>
+            <h2>{jobImages.length} real cleanup photos from recent OJ jobs.</h2>
             <p>
-              The gallery uses contained image frames so tall phone screenshots, wide yard photos, and square job shots
-              stay readable. Nothing is cropped so tightly that the cleanup context disappears.
+              These are the updated image files you provided, replacing the older text-overlay versions. The gallery
+              keeps the full frame visible so visitors can actually understand the scope before and after pickup.
             </p>
           </div>
           <ProofGallery />

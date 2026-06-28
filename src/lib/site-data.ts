@@ -8,6 +8,7 @@ export const business = {
   emailHref: "mailto:ojjunkremoval@gmail.com",
   calendly:
     "https://calendly.com/ojjunkremoval-estimate/junkremoval?hide_event_type_details=1&hide_gdpr_banner=1&background_color=333232&text_color=ffffff&primary_color=0bb501",
+  instagram: "https://www.instagram.com/ojjunkremoval/",
   facebook: "https://www.facebook.com/profile.php?id=61563822505912",
   thumbtack:
     "https://www.thumbtack.com/ga/peachtree-corners/junk-removal/oj-junk-removal4043997457fast-service/service/408241237328470029",
@@ -190,7 +191,7 @@ export const services: Service[] = [
       "Quick, reliable junk removal for homes, rentals, offices, and cleanup projects across the Atlanta Metro Area.",
     answer:
       "OJ Junk Removal removes unwanted items from your home or business, loads everything, hauls it away, and leaves the area swept when possible. Send photos or book a free estimate for fast, no-pressure pricing.",
-    image: "/images/jobs/job-30.png",
+    image: "/images/proof/driveway-bags-before.webp",
     icon: "truck",
     includes: ["Garage clutter", "Basement junk", "Old boxes", "Bagged trash", "Bulky items", "General debris"],
     bestFor: ["Move-out cleanups", "Garage resets", "Rental turnovers", "One-time clutter removal"],
@@ -216,7 +217,7 @@ export const services: Service[] = [
       "When the route allows, OJ Junk Removal can clear boxes, furniture, appliances, and mixed junk the same day you call.",
     answer:
       "Same-day junk removal is available for many Atlanta Metro jobs. Call or book online, share photos of the pile, and the team will confirm route availability and quote details quickly.",
-    image: "/images/jobs/job-27.png",
+    image: "/images/proof/garage-boxes-before.webp",
     icon: "truck",
     includes: ["Curbside piles", "Move-in boxes", "Small cleanouts", "Furniture pickup", "Bagged clutter", "Light debris"],
     bestFor: ["Last-minute moveouts", "HOA deadline cleanup", "Garage piles", "Post-project junk"],
@@ -242,7 +243,7 @@ export const services: Service[] = [
       "Old couches, dressers, tables, mattresses, shelves, and bulky furniture removed without you lifting it.",
     answer:
       "OJ Junk Removal removes furniture from rooms, garages, storage units, patios, and curbside piles. The crew handles the lifting, loading, and disposal so you can reclaim the space.",
-    image: "/images/jobs/job-34.png",
+    image: "/images/proof/driveway-furniture-before.webp",
     icon: "sofa",
     includes: ["Couches", "Tables", "Dressers", "Bed frames", "Patio furniture", "Shelving"],
     bestFor: ["Apartment cleanouts", "Furniture upgrades", "Estate cleanouts", "Rental turnovers"],
@@ -268,7 +269,7 @@ export const services: Service[] = [
       "Refrigerators, washers, dryers, stoves, freezers, and other appliances removed safely and responsibly.",
     answer:
       "OJ Junk Removal hauls away unwanted appliances and helps keep heavy, awkward items out of your way. Tell the team what appliance you have and whether it is disconnected before pickup.",
-    image: "/images/jobs/job-37.jpg",
+    image: "/images/proof/garage-furniture-before.webp",
     icon: "appliance",
     includes: ["Refrigerators", "Washers", "Dryers", "Stoves", "Freezers", "Small appliances"],
     bestFor: ["Kitchen upgrades", "Laundry room replacements", "Rental turns", "Scrap recycling"],
@@ -294,7 +295,7 @@ export const services: Service[] = [
       "Renovation debris, wood scraps, drywall, packaging, old fixtures, and construction waste hauled off after the work is done.",
     answer:
       "OJ Junk Removal clears construction debris for homeowners, contractors, and rental properties. Share photos of the debris pile so the team can estimate volume, weight, and access.",
-    image: "/images/jobs/job-15.webp",
+    image: "/images/proof/basement-bulky-before.webp",
     icon: "debris",
     includes: ["Wood scraps", "Drywall", "Cabinets", "Flooring", "Old fixtures", "Packaging debris"],
     bestFor: ["Kitchen remodels", "Bathroom updates", "DIY renovation cleanup", "Contractor punch-list cleanup"],
@@ -320,7 +321,7 @@ export const services: Service[] = [
       "Metal furniture, appliances, fixtures, shelving, and mixed scrap removed with recycling-first disposal where available.",
     answer:
       "OJ Junk Removal helps keep reusable metal out of landfills whenever local recycling options are available. Send photos of the scrap pile for a quick estimate.",
-    image: "/images/flyers/flyer-05.jpg",
+    image: "/images/proof/garage-furniture-before.webp",
     icon: "metal",
     includes: ["Metal shelving", "Appliances", "Fixtures", "Exercise equipment", "Patio items", "Mixed scrap"],
     bestFor: ["Garage cleanouts", "Shop cleanup", "Appliance swaps", "Commercial clutter"],
@@ -346,7 +347,7 @@ export const services: Service[] = [
       "Complete cleanout support for homes, apartments, estates, rentals, storage areas, garages, and basements.",
     answer:
       "OJ Junk Removal handles larger property cleanouts with a clear plan, respectful crew, and volume-based quote. The team removes unwanted items room by room or from staged piles.",
-    image: "/images/jobs/job-31.png",
+    image: "/images/proof/basement-bulky-after-b.webp",
     icon: "house",
     includes: ["Estate items", "Rental junk", "Garage contents", "Basement clutter", "Old furniture", "Mixed trash"],
     bestFor: ["Estate transitions", "Foreclosure cleanup", "Rental turnovers", "Major decluttering"],
@@ -372,7 +373,7 @@ export const services: Service[] = [
       "Branches, brush, storm debris, leaves, outdoor clutter, and old patio items hauled from your yard or curb.",
     answer:
       "OJ Junk Removal clears yard debris and outdoor clutter so the property looks safer and more usable. Photos help confirm pile size and whether the material is bagged or loose.",
-    image: "/images/jobs/job-10.webp",
+    image: "/images/proof/trampoline-before.webp",
     icon: "yard",
     includes: ["Branches", "Brush piles", "Leaves", "Planters", "Outdoor trash", "Patio clutter"],
     bestFor: ["Storm cleanup", "Seasonal yard reset", "Pre-listing cleanup", "Patio refresh"],
@@ -398,7 +399,7 @@ export const services: Service[] = [
       "Office furniture, boxes, outdated equipment, fixtures, and clutter removed with minimal disruption.",
     answer:
       "OJ Junk Removal helps small offices, suites, retail spaces, and property managers clear unwanted business items. The crew can plan around building access, elevators, and loading areas.",
-    image: "/images/jobs/job-05.webp",
+    image: "/images/proof/garage-boxes-before.webp",
     icon: "office",
     includes: ["Office chairs", "Desks", "Boxes", "Shelving", "Fixtures", "General clutter"],
     bestFor: ["Office moves", "Suite cleanouts", "Retail resets", "Storage room cleanup"],
@@ -424,7 +425,7 @@ export const services: Service[] = [
       "Mattresses, box springs, bed frames, headboards, and bedroom furniture hauled away quickly.",
     answer:
       "OJ Junk Removal removes mattresses and bed items from bedrooms, apartments, curbside, or storage areas. Share the size and location for a fast estimate.",
-    image: "/images/jobs/job-02.jpg",
+    image: "/images/proof/driveway-furniture-before.webp",
     icon: "mattress",
     includes: ["Mattresses", "Box springs", "Bed frames", "Headboards", "Bedroom furniture", "Bagged bedding"],
     bestFor: ["New mattress delivery", "Apartment moveouts", "Guest room cleanup", "Rental refresh"],
@@ -450,7 +451,7 @@ export const services: Service[] = [
       "Boxes, bags, toys, decor, small furniture, garage items, and general household clutter removed.",
     answer:
       "OJ Junk Removal clears household items quickly so rooms, closets, porches, garages, and storage spaces can be used again. The crew can quote from photos or an onsite estimate.",
-    image: "/images/jobs/job-29.png",
+    image: "/images/proof/garage-boxes-before.webp",
     icon: "box",
     includes: ["Moving boxes", "Decor", "Old toys", "Small furniture", "Closet clutter", "Garage items"],
     bestFor: ["Move-in cleanup", "Spring cleaning", "Decluttering", "Storage room resets"],
@@ -476,7 +477,7 @@ export const services: Service[] = [
       "Fast removal for the items left behind before keys, closing, inspection, or a landlord walkthrough.",
     answer:
       "OJ Junk Removal helps clear last-minute move-out piles, old furniture, boxes, and household junk so the space is ready for the next step.",
-    image: "/images/jobs/job-32.png",
+    image: "/images/proof/driveway-furniture-after.webp",
     icon: "truck",
     includes: ["Leftover boxes", "Unwanted furniture", "Closet items", "Garage piles", "Bagged trash", "Small appliances"],
     bestFor: ["End-of-lease cleanup", "Home sale prep", "Move-in box removal", "Landlord walkthroughs"],
@@ -545,66 +546,86 @@ export const reviews = [
   }
 ];
 
-const jobImageFiles = [
-  "job-01.jpg",
-  "job-02.jpg",
-  "job-03.jpg",
-  "job-04.jpg",
-  "job-05.webp",
-  "job-06.webp",
-  "job-07.webp",
-  "job-08.webp",
-  "job-09.webp",
-  "job-10.webp",
-  "job-11.webp",
-  "job-12.webp",
-  "job-13.webp",
-  "job-14.webp",
-  "job-15.webp",
-  "job-16.webp",
-  "job-17.webp",
-  "job-18.webp",
-  "job-19.webp",
-  "job-20.webp",
-  "job-21.webp",
-  "job-22.webp",
-  "job-23.webp",
-  "job-24.webp",
-  "job-25.webp",
-  "job-26.webp",
-  "job-27.png",
-  "job-28.png",
-  "job-29.png",
-  "job-30.png",
-  "job-31.png",
-  "job-32.png",
-  "job-33.png",
-  "job-34.png",
-  "job-35.png",
-  "job-36.png",
-  "job-37.jpg"
-];
-
-const proofLabels = [
-  "Box pickup",
-  "Furniture removal",
-  "Household clutter",
-  "Garage pile",
-  "Outdoor cleanout",
-  "Backyard cleanup",
-  "Patio reset",
-  "Yard debris",
-  "Brush pile",
-  "Tree debris",
-  "Curbside pickup",
-  "Driveway cleanout"
-];
-
-export const jobImages = jobImageFiles.map((file, index) => ({
-  src: `/images/jobs/${file}`,
-  alt: `${business.name} job photo ${index + 1}: ${proofLabels[index % proofLabels.length]}`,
-  label: proofLabels[index % proofLabels.length]
-}));
+export const jobImages = [
+  {
+    src: "/images/proof/driveway-bags-before.webp",
+    alt: "Before junk removal photo of a driveway loaded with black trash bags, cardboard, and household items ready for pickup.",
+    label: "Driveway bag haul",
+    stage: "Before"
+  },
+  {
+    src: "/images/proof/driveway-bags-after.webp",
+    alt: "After junk removal photo showing the same driveway cleared and washed down beside landscaped shrubs.",
+    label: "Driveway bag haul",
+    stage: "After"
+  },
+  {
+    src: "/images/proof/garage-boxes-before.webp",
+    alt: "Before garage cleanout photo with stacked boxes, bins, and loose household clutter around a parked car.",
+    label: "Garage box cleanout",
+    stage: "Before"
+  },
+  {
+    src: "/images/proof/garage-boxes-after.webp",
+    alt: "After garage cleanout photo with the floor opened up and the garage mostly cleared beside the parked car.",
+    label: "Garage box cleanout",
+    stage: "After"
+  },
+  {
+    src: "/images/proof/basement-bulky-before.webp",
+    alt: "Before basement cleanup photo showing bulky exercise equipment, a bicycle, a clock face, and bagged junk in a framed room.",
+    label: "Basement bulky-item cleanup",
+    stage: "Before"
+  },
+  {
+    src: "/images/proof/basement-bulky-after-a.webp",
+    alt: "After basement cleanup photo showing a cleared concrete floor and opened wall framing after bulky items were removed.",
+    label: "Basement bulky-item cleanup",
+    stage: "After"
+  },
+  {
+    src: "/images/proof/basement-bulky-after-b.webp",
+    alt: "Second after photo of the same basement cleanup showing a wider clean path and open floor space near the doorway.",
+    label: "Basement bulky-item cleanup",
+    stage: "After"
+  },
+  {
+    src: "/images/proof/front-yard-before.webp",
+    alt: "Before outdoor cleanup photo of a front yard and driveway with a work trailer and scattered items near the porch.",
+    label: "Outdoor property cleanup",
+    stage: "Before"
+  },
+  {
+    src: "/images/proof/trampoline-before.webp",
+    alt: "Before backyard cleanup photo with an old trampoline standing in a wooded yard.",
+    label: "Backyard trampoline removal",
+    stage: "Before"
+  },
+  {
+    src: "/images/proof/backyard-after.webp",
+    alt: "After backyard cleanup photo showing the same area opened up after the trampoline and debris were removed.",
+    label: "Backyard trampoline removal",
+    stage: "After"
+  },
+  {
+    src: "/images/proof/garage-furniture-before.webp",
+    alt: "Before garage furniture removal photo with boxed items, packing materials, and wood furniture stacked near the entrance.",
+    label: "Garage furniture haul",
+    stage: "Before"
+  },
+  {
+    src: "/images/proof/driveway-furniture-before.webp",
+    alt: "Before driveway pickup photo with chairs, cardboard, boxed items, and bagged junk piled in front of a garage door.",
+    label: "Driveway furniture pickup",
+    stage: "Before"
+  },
+  {
+    src: "/images/proof/driveway-furniture-after.webp",
+    alt: "After driveway pickup photo showing the garage door area fully cleared with only the clean concrete pad remaining.",
+    label: "Driveway furniture pickup",
+    stage: "After"
+  }
+] as const;
 
 export const flyerImages = Array.from({ length: 8 }, (_, index) => ({
   src: `/images/flyers/flyer-${String(index + 1).padStart(2, "0")}.jpg`,

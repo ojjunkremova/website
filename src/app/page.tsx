@@ -83,8 +83,8 @@ export default async function HomePage() {
               <div className="hero-photo">
                 <span className="photo-badge">Before pickup</span>
                 <Image
-                  src="/images/jobs/job-09.webp"
-                  alt="Before junk removal photo showing a backyard cleanup pile before pickup"
+                  src="/images/proof/driveway-bags-before.webp"
+                  alt="Before junk removal photo showing a driveway full of bagged trash and loose household items before pickup"
                   fill
                   sizes="(max-width: 1120px) 100vw, 38vw"
                   priority
@@ -93,8 +93,8 @@ export default async function HomePage() {
               <div className="hero-photo small">
                 <span className="photo-badge">After pickup</span>
                 <Image
-                  src="/images/jobs/job-08.webp"
-                  alt="After junk removal photo showing the same backyard cleared and cleaned up"
+                  src="/images/proof/driveway-bags-after.webp"
+                  alt="After junk removal photo showing the same driveway cleared and cleaned up after pickup"
                   fill
                   sizes="(max-width: 1120px) 100vw, 28vw"
                 />
@@ -205,8 +205,8 @@ export default async function HomePage() {
           </div>
           <div className="photo-frame reveal">
             <Image
-              src="/images/jobs/job-26.webp"
-              alt="Clean driveway after junk removal service"
+              src="/images/proof/driveway-furniture-after.webp"
+              alt="Clean garage driveway after furniture and cardboard junk removal service"
               fill
               sizes="(max-width: 1120px) 100vw, 45vw"
             />
@@ -251,8 +251,8 @@ export default async function HomePage() {
           <div className="section-header center reveal">
             <h2>Before and after job gallery.</h2>
             <p>
-              A quick sample from the full reviews page. The gallery uses contained frames so vertical phone images stay
-              readable instead of getting over-cropped.
+              A quick sample from the full reviews page using the latest real OJ job photos instead of text-stamped
+              before-and-after graphics. The frames stay uncropped so the cleanup context is still easy to read.
             </p>
           </div>
           <ProofGallery limit={8} compact />

@@ -1,8 +1,26 @@
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { business, navLinks, serviceAreas, services } from "@/lib/site-data";
+
+function InstagramIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
+      <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.6 1.6-1.6H16V4.8c-.3 0-.9-.1-1.8-.1-2.7 0-4.3 1.6-4.3 4.6V11H7.5v3H10V21h3.5Z" />
+    </svg>
+  );
+}
 
 export function Footer() {
   return (
@@ -21,8 +39,11 @@ export function Footer() {
             and yard debris pickup with real job proof and straightforward estimates.
           </p>
           <div className="footer-social">
+            <a href={business.instagram} target="_blank" rel="noreferrer" aria-label="OJ Junk Removal on Instagram">
+              <InstagramIcon />
+            </a>
             <a href={business.facebook} target="_blank" rel="noreferrer" aria-label="OJ Junk Removal on Facebook">
-              <MessageCircle size={18} />
+              <FacebookIcon />
             </a>
             <a href={business.thumbtack} target="_blank" rel="noreferrer">
               Thumbtack
