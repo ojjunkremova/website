@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { SchemaScript } from "@/components/site/schema-script";
-import { business, reviews } from "@/lib/site-data";
+import { business } from "@/lib/site-data";
+import { loadGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
   title: "About OJ Junk Removal",
@@ -28,7 +29,10 @@ const aboutSchema = {
   }
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const googleReviews = await loadGoogleReviews();
+  const featuredGoogleReviews = googleReviews.slice(0, 2);
+
   return (
     <>
       <section className="page-hero">
@@ -58,7 +62,7 @@ export default function AboutPage() {
             </p>
             <div className="hero-actions">
               <Link href="/quote" className="btn btn-primary">
-                Book a Cleanup
+                Book a Cleaning
               </Link>
               <a href={business.phoneHref} className="btn btn-secondary">
                 Call {business.phone}
@@ -121,14 +125,21 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="review-grid">
-            {reviews.slice(0, 2).map((review) => (
-              <article className="review-card reveal" key={review.name}>
+            {featuredGoogleReviews.map((review) => (
+              <article className="review-card reveal" key={`${review.name}-${review.date}`}>
                 <div className="stars" aria-label="5 out of 5 stars">
-                  *****
+                  {Array.from({ length: review.rating }, (_, index) => (
+                    <span key={index}>★</span>
+                  ))}
                 </div>
                 <blockquote>{review.text}</blockquote>
                 <footer>
                   {review.name} - {review.date}
+                  <small>
+                    <a href={review.shareUrl} target="_blank" rel="noreferrer">
+                      Verified Google review
+                    </a>
+                  </small>
                 </footer>
               </article>
             ))}

@@ -7,7 +7,8 @@ import { HaulAnimation } from "@/components/site/haul-animation";
 import { ProofGallery } from "@/components/site/proof-gallery";
 import { SchemaScript } from "@/components/site/schema-script";
 import { ServiceIcon } from "@/components/site/service-icon";
-import { business, reviews, serviceAreas, services, siteFaq } from "@/lib/site-data";
+import { business, serviceAreas, services, siteFaq } from "@/lib/site-data";
+import { loadGoogleReviews } from "@/lib/google-reviews";
 
 export const metadata: Metadata = {
   title: "Atlanta Metro Junk Removal and Same-Day Hauling",
@@ -31,7 +32,10 @@ const homeFaqSchema = {
   }))
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const googleReviews = await loadGoogleReviews();
+  const featuredGoogleReviews = googleReviews.slice(0, 3);
+
   return (
     <>
       <section className="hero">
@@ -215,21 +219,25 @@ export default function HomePage() {
           <div className="section-header reveal">
             <h2>Customers call out speed, respect, and clean work.</h2>
             <p>
-              These are the review snippets you provided from Thumbtack, surfaced with enough context for a visitor to
-              understand the job, not just see a rating badge.
+              These are the Google review snippets you shared, surfaced with enough context for a visitor to understand
+              the job, not just see a rating badge.
             </p>
           </div>
           <div className="review-grid">
-            {reviews.map((review) => (
-              <article className="review-card reveal" key={review.name}>
+            {featuredGoogleReviews.map((review) => (
+              <article className="review-card reveal" key={`${review.name}-${review.date}`}>
                 <div className="stars" aria-label="5 out of 5 stars">
-                  *****
+                  {Array.from({ length: review.rating }, (_, index) => (
+                    <span key={index}>★</span>
+                  ))}
                 </div>
                 <blockquote>{review.text}</blockquote>
                 <footer>
                   {review.name} - {review.date}
                   <small>
-                    {review.source}. {review.detail}
+                    <a href={review.shareUrl} target="_blank" rel="noreferrer">
+                      Verified Google review
+                    </a>
                   </small>
                 </footer>
               </article>
@@ -291,7 +299,7 @@ export default function HomePage() {
               language that matches the way people compare local junk removal companies.
             </p>
             <Link href="/quote" className="btn btn-primary">
-              Book the Free Estimate
+              Book a Cleaning
             </Link>
           </div>
           <div className="faq-list">
