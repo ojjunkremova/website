@@ -88,7 +88,13 @@ export function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>Copyright 2026 OJ Junk Removal. All rights reserved.</p>
+        <div className="footer-meta">
+          <p>Copyright 2026 OJ Junk Removal. All rights reserved.</p>
+          <p className="footer-credit">
+            Created by <a href="https://stackmode.net" target="_blank" rel="noreferrer">Stackmodechris</a> &amp; the{" "}
+            <a href="https://stackmode.net" target="_blank" rel="noreferrer">Stackmode Network</a>
+          </p>
+        </div>
         <div>
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/cookies">Cookies</Link>

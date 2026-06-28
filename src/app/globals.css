@@ -1335,6 +1335,23 @@ p {
   font-size: 13px;
 }
 
+.footer-meta {
+  display: grid;
+  gap: 4px;
+}
+
+.footer-credit {
+  color: oklch(0.66 0.018 150);
+}
+
+.footer-credit a {
+  color: oklch(0.82 0.02 150);
+}
+
+.footer-credit a:hover {
+  color: var(--white);
+}
+
 .footer-bottom div {
   display: flex;
   flex-wrap: wrap;
