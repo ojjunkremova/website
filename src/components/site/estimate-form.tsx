@@ -5,6 +5,12 @@ import { FormEvent, useState } from "react";
 
 import { business } from "@/lib/site-data";
 
+declare global {
+  interface Window {
+    gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
+  }
+}
+
 const removalOptions = [
   "Household junk or furniture",
   "Appliances or mattresses",
@@ -25,8 +31,23 @@ export function EstimateForm() {
     const body = encodeURIComponent(
       `Name: ${data.get("name")}\nPhone: ${data.get("phone")}\nEmail: ${data.get("email")}\nCity: ${data.get("city")}\nWhat needs removed: ${data.get("removal")}\n\nJob details:\n${data.get("details")}`
     );
-    window.location.href = `mailto:${business.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+    const mailtoUrl = `mailto:${business.email}?subject=${subject}&body=${body}`;
+    const openEmail = () => {
+      window.location.href = mailtoUrl;
+      setSent(true);
+    };
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-18403553117/HRXHCNyKxI4dEN3ev8dE",
+        value: 1.0,
+        currency: "USD",
+        event_callback: openEmail
+      });
+      window.setTimeout(openEmail, 1000);
+    } else {
+      openEmail();
+    }
   }
 
   return (
