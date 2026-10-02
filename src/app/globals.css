@@ -1365,7 +1365,7 @@ p {
   bottom: 12px;
   z-index: 60;
   display: none;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 8px;
 }
 
@@ -1657,4 +1657,66 @@ p {
   .header-progress {
     transform: none;
   }
+}
+
+.estimate-hero {
+  background: var(--ink);
+  color: oklch(0.9 0.02 150);
+  border-bottom: 3px solid var(--orange);
+  background-image: linear-gradient(90deg, oklch(0.12 0.03 155 / .98), oklch(0.12 0.03 155 / .82)), url('/images/proof-refresh/property-clean-exterior.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.estimate-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(360px, .72fr);
+  gap: 54px;
+  align-items: center;
+  padding: 76px 0 88px;
+}
+
+.estimate-hero-copy { display: grid; gap: 24px; max-width: 650px; }
+.estimate-hero-copy .tagline { color: var(--orange); }
+.estimate-hero h1 { color: var(--white); font-size: clamp(46px, 6vw, 76px); }
+.estimate-hero-copy > p { font-size: 20px; max-width: 58ch; color: oklch(0.86 0.02 150); }
+.estimate-benefits { display: flex; flex-wrap: wrap; gap: 10px 24px; font-weight: 900; }
+.estimate-benefits span::before { content: '✓'; display: inline-grid; place-items: center; width: 20px; height: 20px; margin-right: 8px; border-radius: 50%; background: var(--orange); color: var(--ink); }
+.estimate-form-card { padding: 28px; border: 3px solid var(--orange); border-radius: var(--radius); background: var(--white); color: var(--text); box-shadow: 10px 10px 0 oklch(0.08 0.02 155 / .45); scroll-margin-top: 110px; }
+.estimate-form-heading { display: grid; gap: 12px; margin-bottom: 22px; }
+.estimate-form-heading .tagline { color: var(--green-dark); }
+.estimate-form-heading h2 { font-size: 32px; }
+.estimate-form { display: grid; gap: 14px; }
+.estimate-form label { display: grid; gap: 6px; color: var(--ink); font-size: 14px; font-weight: 900; }
+.estimate-form input, .estimate-form select, .estimate-form textarea { width: 100%; border: 2px solid var(--line); border-radius: 5px; padding: 11px 12px; color: var(--ink); background: var(--surface); outline: none; }
+.estimate-form input:focus, .estimate-form select:focus, .estimate-form textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px oklch(0.45 0.145 147 / .18); }
+.estimate-form textarea { resize: vertical; }
+.estimate-submit { width: 100%; text-transform: uppercase; }
+.form-note { font-size: 12px; color: var(--muted); }
+.form-note a { text-decoration: underline; }
+.estimate-success { display: flex; align-items: flex-start; gap: 8px; color: var(--green-dark); font-weight: 700; font-size: 14px; }
+.estimate-proof { background: var(--surface-green); }
+ .estimate-proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+ .estimate-proof-image { position: relative; min-height: 270px; overflow: hidden; border: 2px solid var(--ink); border-radius: var(--radius); background: var(--white); }
+ .estimate-proof-image img { object-fit: cover; }
+ .estimate-reviews { background: var(--white); }
+ .estimate-reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+ .estimate-reviews-grid .review-card { padding: 22px; }
+  .estimate-bottom-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
+
+@media (max-width: 1120px) {
+  .estimate-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .estimate-hero-copy { max-width: 780px; }
+}
+
+@media (max-width: 760px) {
+  .estimate-hero-grid { padding: 42px 0 60px; gap: 30px; }
+  .estimate-hero h1 { font-size: 46px; }
+  .estimate-hero-copy > p { font-size: 18px; }
+  .estimate-form-card { padding: 20px 16px; }
+  .estimate-form-heading h2 { font-size: 29px; }
+ .estimate-proof-grid { grid-template-columns: 1fr; }
+ .estimate-proof-image { min-height: 230px; }
+ .estimate-reviews-grid { grid-template-columns: 1fr; }
+  .estimate-bottom-actions .btn { width: 100%; }
 }
