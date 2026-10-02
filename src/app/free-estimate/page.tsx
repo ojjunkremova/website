@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { ArrowRight, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { EstimateForm } from "@/components/site/estimate-form";
 import { business } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -51,11 +50,15 @@ export default function FreeEstimatePage() {
               <span>Free estimates</span><span>Upfront pricing</span><span>Fast scheduling</span>
             </div>
             <div className="hero-actions">
-              <a className="btn btn-primary" href="#estimate-form">Get today&apos;s free estimate <ArrowRight size={18} /></a>
-              <a className="btn btn-secondary" href={business.phoneHref}><Phone size={18} /> Call {business.phone}</a>
+              <a className="btn btn-primary" href={business.phoneHref}><Phone size={18} /> Call {business.phone}</a>
             </div>
           </div>
-          <div id="estimate-form"><EstimateForm /></div>
+          <div className="estimate-contact-card">
+            <span className="tagline">Ready when you are</span>
+            <h2>Let&apos;s clear it out.</h2>
+            <p>Call OJ Junk Removal for a fast, friendly quote and availability in the Atlanta Metro Area.</p>
+            <a className="btn btn-primary" href={business.phoneHref}><Phone size={18} /> Call {business.phone}</a>
+          </div>
         </div>
       </section>
 
