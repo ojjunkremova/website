@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CalendarCheck, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import Link from "next/link";
 
 import { Footer } from "@/components/site/footer";
@@ -138,13 +138,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Footer />
         <IntentPopup />
         <div className="mobile-sticky-actions" aria-label="Quick contact actions">
-          <Link href="/quote">
-            <CalendarCheck size={17} />
-            Free Quote
-          </Link>
           <a href={business.phoneHref}>
-            <Phone size={17} />
-            Call
+            <Phone size={18} />
+            Call {business.phone}
           </a>
         </div>
         <SchemaScript data={[localBusinessSchema, websiteSchema, faqSchema]} />
