@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Phone } from "lucide-react";
 import Link from "next/link";
 
@@ -133,6 +134,40 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18403553117"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-call-conversion" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+            window.gtag('js', new Date());
+            window.gtag('config', 'AW-18403553117');
+            window.gtag_report_conversion = function(url) {
+              var callback = function() {
+                if (typeof url !== 'undefined') window.location.href = url;
+              };
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', 'conversion', {
+                  send_to: 'AW-18403553117/xCyeCMjcxY4dEN3ev8dE',
+                  value: 1.0,
+                  currency: 'USD',
+                  event_callback: callback
+                });
+              } else {
+                callback();
+              }
+              return false;
+            };
+            document.addEventListener('click', function(event) {
+              var link = event.target.closest('a[href^="tel:"]');
+              if (!link) return;
+              event.preventDefault();
+              window.gtag_report_conversion(link.href);
+            });
+          `}
+        </Script>
         <Header />
         <main>{children}</main>
         <Footer />
