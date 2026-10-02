@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { ArrowRight, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,6 +28,19 @@ const reviews = [
 export default function FreeEstimatePage() {
   return (
     <>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-18403553117"
+        strategy="afterInteractive"
+      />
+      <Script id="google-ads-conversion-tag" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-18403553117');
+        `}
+      </Script>
       <section className="estimate-hero">
         <div className="container estimate-hero-grid">
           <div className="estimate-hero-copy">
