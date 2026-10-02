@@ -18,6 +18,12 @@ const proofImages = [
   ["/images/proof-refresh/living-room-before-after.jpg", "Living room cleared by OJ Junk Removal"]
 ] as const;
 
+const reviews = [
+  { quote: "Customers consistently call out the crew’s speed and efficiency when clearing unwanted items.", detail: "Thumbtack customer feedback" },
+  { quote: "Professional, easy to work with, and ready to help with the job at hand.", detail: "Thumbtack customer feedback" },
+  { quote: "A 4.7-star rating across 751 reviews reflects the trust Atlanta-area customers place in OJ Junk Removal.", detail: "Thumbtack · 4.7 stars" }
+] as const;
+
 export default function FreeEstimatePage() {
   return (
     <>
@@ -48,6 +54,25 @@ export default function FreeEstimatePage() {
           </div>
           <div className="estimate-proof-grid">
             {proofImages.map(([src, alt]) => <div className="estimate-proof-image" key={src}><Image src={src} alt={alt} fill sizes="(max-width: 760px) 100vw, 33vw" /></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section estimate-reviews" aria-labelledby="estimate-reviews-heading">
+        <div className="container">
+          <div className="section-header center">
+            <span className="tagline">Atlanta customer feedback</span>
+            <h2 id="estimate-reviews-heading">See why customers call OJ.</h2>
+            <p>Real feedback from OJ Junk Removal customers on Thumbtack.</p>
+          </div>
+          <div className="estimate-reviews-grid">
+            {reviews.map((review) => (
+              <article className="review-card" key={review.quote}>
+                <div className="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>{review.quote}</blockquote>
+                <footer>{review.detail}</footer>
+              </article>
+            ))}
           </div>
           <div className="estimate-bottom-actions">
             <Link className="btn btn-primary" href="#estimate-form">Get a quote today</Link>
