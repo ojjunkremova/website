@@ -1682,7 +1682,10 @@ p {
 .estimate-hero-copy > p { font-size: 20px; max-width: 58ch; color: oklch(0.86 0.02 150); }
 .estimate-benefits { display: flex; flex-wrap: wrap; gap: 10px 24px; font-weight: 900; }
 .estimate-benefits span::before { content: '✓'; display: inline-grid; place-items: center; width: 20px; height: 20px; margin-right: 8px; border-radius: 50%; background: var(--orange); color: var(--ink); }
-.estimate-form-card { padding: 28px; border: 3px solid var(--orange); border-radius: var(--radius); background: var(--white); color: var(--text); box-shadow: 10px 10px 0 oklch(0.08 0.02 155 / .45); scroll-margin-top: 110px; }
+.estimate-form-card, .estimate-contact-card { padding: 28px; border: 3px solid var(--orange); border-radius: var(--radius); background: var(--white); color: var(--text); box-shadow: 10px 10px 0 oklch(0.08 0.02 155 / .45); }
+.estimate-contact-card { display: grid; gap: 16px; align-content: center; min-height: 300px; }
+.estimate-contact-card .tagline { color: var(--green-dark); }
+.estimate-contact-card p { max-width: 34ch; }
 .estimate-form-heading { display: grid; gap: 12px; margin-bottom: 22px; }
 .estimate-form-heading .tagline { color: var(--green-dark); }
 .estimate-form-heading h2 { font-size: 32px; }
